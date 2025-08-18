@@ -256,7 +256,7 @@ Create a `LICENSE` file for clarity.
 
 ## Contact
 
-Author: (Add your preferred name)  
+Author: Hazrat Maghaz  
 GitHub: https://github.com/HazratMaghaz  
 Issues / Ideas: Open a GitHub Issue
 
