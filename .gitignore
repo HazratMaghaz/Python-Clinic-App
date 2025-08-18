@@ -63,3 +63,5 @@ htmlcov/
 
 # If you want to specifically keep a file previously unignored use !pattern
 # Example: !Maazo_clinic.py
+*.py
+!Maazo_clinic.py
