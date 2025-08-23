@@ -227,7 +227,7 @@ Coding style suggestions:
 Add a license (MIT, Apache-2.0, etc.).  
 Example (MIT):
 ```
-MIT License © 2025 Your Name
+MIT License © 2025 Hazrat Maghaz
 ```
 Create a `LICENSE` file for clarity.
 
@@ -258,7 +258,5 @@ Once you add CI or coverage:
 - Libraries or tutorials referenced
 
 ---
-
-> Tip: After updating `Maazo_clinic.py` to confirm actual features, revise the Features, Usage, and Roadmap sections accordingly.
 
 Happy building!
