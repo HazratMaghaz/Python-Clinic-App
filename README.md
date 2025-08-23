@@ -81,37 +81,17 @@ git clone https://github.com/HazratMaghaz/Python-Clinic-App.git
 cd Python-Clinic-App
 ```
 
-(If you later add dependencies)  
-```bash
-pip install -r requirements.txt
-```
-
 ### Running the App
 ```bash
 python Maazo_clinic.py
 ```
 
-If the script uses a `main()` guard, it will launch an interactive menu. Otherwise just follow on-screen prompts.
+If the script uses a `main()` guard, it will launch an interactive menu. Otherwise, just follow on-screen prompts.
 
 ---
 
-## Configuration
 
-If you introduce configuration options, consider a `.env` or `config.json`. For example:
 
-| Purpose              | Suggested Mechanism        |
-|----------------------|----------------------------|
-| Data file path       | Environment variable       |
-| Autosave toggle      | Command line flag          |
-| Log level            | Environment variable / arg |
-
-Example pattern to add later:
-```python
-import os
-DATA_FILE = os.getenv("CLINIC_DATA_FILE", "clinic_data.json")
-```
-
----
 
 ## Usage Examples
 
