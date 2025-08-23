@@ -37,7 +37,6 @@ Maazo Clinic is intended as a simple clinic management console/script to experim
 
 Because everything currently lives in a single Python file, it's ideal for learning or rapid prototyping. You can later modularize into packages (e.g. `patients/`, `appointments/`, `storage/`).
 
-> NOTE: Adjust the description below to reflect the actual functionality implemented in `Maazo_clinic.py`.
 
 ---
 
