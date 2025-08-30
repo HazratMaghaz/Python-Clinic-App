@@ -1,9 +1,9 @@
-print("Welcome to Maazo Clinic \n\n"
-      "How may we help you, dear?\n"
-      "1. Check Body Mass Index (BMI)\n"
-      "2. Baby Blood Group Identification\n")
+print("Welcome to Maazo Clinic!\n")
+print("How may we help you today?")
+print("1. Check Body Mass Index (BMI)")
+print("2. Baby Blood Group Identification")
 
-def BabyBloodGroupIdentifier():
+def baby_blood_group_identifier():
     print("Welcome to Baby Blood Group Identifier \n")
     print('''
                                                             
@@ -24,73 +24,55 @@ def BabyBloodGroupIdentifier():
 
     print("Valid groups: A+, A-, B+, B-, AB+, AB-, O+, O-\n")
 
-    father = input("Enter Baby's Father Blood group: ").upper()
-    mother = input("Enter Baby's Mother Blood group: ").upper()
-
     valid_groups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
+    father = input("Enter Baby's Father Blood group (e.g. A+, O-): ").upper()
+    mother = input("Enter Baby's Mother Blood group (e.g. B+, AB-): ").upper()
+
     if father not in valid_groups or mother not in valid_groups:
-        print("Please  Try again by entering  valid values as directed above")
-        return 
+        print("Invalid blood group entered. Please try again.")
+        return
 
-    # ---- Step 1: Separate ABO and Rh ----
-    if father.endswith("+"):
-        father_abo = father.replace("+", "")
-        father_rh = "+"
-    else:
-        father_abo = father.replace("-", "")
-        father_rh = "-"
+    def split_group(bg):
+        if bg.endswith('+'):
+            return bg[:-1], '+'
+        else:
+            return bg[:-1], '-'
 
-    if mother.endswith("+"):
-        mother_abo = mother.replace("+", "")
-        mother_rh = "+"
-    else:
-        mother_abo = mother.replace("-", "")
-        mother_rh = "-"
+    father_abo, father_rh = split_group(father)
+    mother_abo, mother_rh = split_group(mother)
 
-    # ---- Step 2: Possible ABO groups ----
-    if (father_abo == "A" and mother_abo == "A"):
-        possible_abo = ["A", "O"]
-    elif (father_abo == "A" and mother_abo == "B") or (father_abo == "B" and mother_abo == "A"):
-        possible_abo = ["A", "B", "AB", "O"]
-    elif (father_abo == "A" and mother_abo == "AB") or (father_abo == "AB" and mother_abo == "A"):
-        possible_abo = ["A", "B", "AB"]
-    elif (father_abo == "A" and mother_abo == "O") or (father_abo == "O" and mother_abo == "A"):
-        possible_abo = ["A", "O"]
-    elif (father_abo == "B" and mother_abo == "B"):
-        possible_abo = ["B", "O"]
-    elif (father_abo == "B" and mother_abo == "AB") or (father_abo == "AB" and mother_abo == "B"):
-        possible_abo = ["A", "B", "AB"]
-    elif (father_abo == "B" and mother_abo == "O") or (father_abo == "O" and mother_abo == "B"):
-        possible_abo = ["B", "O"]
-    elif (father_abo == "AB" and mother_abo == "AB"):
-        possible_abo = ["A", "B", "AB"]
-    elif (father_abo == "AB" and mother_abo == "O") or (father_abo == "O" and mother_abo == "AB"):
-        possible_abo = ["A", "B"]
-    else:  # O + O
-        possible_abo = ["O"]
+    # ABO possibilities (simplified)
+    combos = {
+        ('A', 'A'): ['A', 'O'],
+        ('A', 'B'): ['A', 'B', 'AB', 'O'],
+        ('B', 'A'): ['A', 'B', 'AB', 'O'],
+        ('A', 'AB'): ['A', 'B', 'AB'],
+        ('AB', 'A'): ['A', 'B', 'AB'],
+        ('A', 'O'): ['A', 'O'],
+        ('O', 'A'): ['A', 'O'],
+        ('B', 'B'): ['B', 'O'],
+        ('B', 'AB'): ['A', 'B', 'AB'],
+        ('AB', 'B'): ['A', 'B', 'AB'],
+        ('B', 'O'): ['B', 'O'],
+        ('O', 'B'): ['B', 'O'],
+        ('AB', 'AB'): ['A', 'B', 'AB'],
+        ('AB', 'O'): ['A', 'B'],
+        ('O', 'AB'): ['A', 'B'],
+        ('O', 'O'): ['O']
+    }
+    possible_abo = combos.get((father_abo, mother_abo), ['O'])
+    possible_rh = ['+', '-'] if father_rh == '+' or mother_rh == '+' else ['-']
 
-    # ---- Step 3: Possible Rh ----
-    if father_rh == "-" and mother_rh == "-":
-        possible_rh = ["-"]
-    else:
-        possible_rh = ["+", "-"]
-
-    # ---- Step 4: Combine with simple probabilities ----
-    print("\nPossible baby blood groups (with rough chances):")
-
-    # Split percentage equally
-    total_combinations = len(possible_abo) * len(possible_rh)
-    chance = round(100 / total_combinations, 2)
-
+    print("\nPossible baby blood groups:")
     for abo in possible_abo:
         for rh in possible_rh:
-            print(f"{abo}{rh} : {chance}% chance")
+            print(f"{abo}{rh}")
 
 
 
 
 
-def BodyMassIndex():
+def body_mass_index():
     print('''
 
                                                                                                                                                         
@@ -112,21 +94,23 @@ def BodyMassIndex():
                    "3. Feet & Inches\n"
                    "Choose (1/2/3): ").strip()
 
-    # weight = float(input("Please enter your weight in Kg: "))
+    # ...existing code...
 
-       # Keep asking until user gives a valid number
     while True:
         weight_input = input("Please enter your weight in Kg: ").strip()
-        if weight_input.replace(".", "", 1).isdigit():   # check if it's a number (with one dot allowed)
+        try:
             weight = float(weight_input)
-            break
-        else:
-            print(" Invalid input! Please enter a valid number (e.g., 70.5).")
+            if weight > 0:
+                break
+            else:
+                print("Weight must be positive.")
+        except ValueError:
+            print("Invalid input! Please enter a valid number (e.g., 70.5).")
 
     valid = ["1", "2", "3"]
     if choice not in valid:
-        print("Please  Try again by entering  valid values as directed above")
-        return 
+        print("Please try again by entering a valid choice (1, 2, or 3).")
+        return
 
     if choice == "1":
         height = float(input("Please enter your height in meters: "))
