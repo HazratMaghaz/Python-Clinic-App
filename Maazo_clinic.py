@@ -148,6 +148,7 @@ def BodyMassIndex():
         print(f"Your BMI is {BMI}, you are underweight.")
     elif 18.5 <= BMI < 25:
         print(f"Your BMI is {BMI}, you have a normal weight.")
+        print("You can eat samosa parathas + handi's , tute mute with chai")
     elif 25 <= BMI < 30:
         print(f"Your BMI is {BMI}, you are overweight.")
     elif 30 <= BMI < 35:
