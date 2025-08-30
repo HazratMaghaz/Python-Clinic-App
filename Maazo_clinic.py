@@ -151,8 +151,10 @@ def BodyMassIndex():
         print("You can eat samosa parathas + handi's , tute mute with chai")
     elif 25 <= BMI < 30:
         print(f"Your BMI is {BMI}, you are overweight.")
+        print("Wow Bro you are at the boundary line now line of control keep eye while you are busy battle between your body and life, I suggests make friend how always give you tensions there , espacilly from Biochemistry domain.")
     elif 30 <= BMI < 35:
         print(f"Your BMI is {BMI}, you are obese (consider a treatment plan).")
+        print("Lol ! enjoy your little time in world! keep moving once you stop then you will appear in next world")
     else:
         print(f"Your BMI is {BMI}, you are clinically obese. Please consult a healthcare professional.")
 
