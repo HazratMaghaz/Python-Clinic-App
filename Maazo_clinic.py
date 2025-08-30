@@ -157,4 +157,11 @@ else:
 
 def baby_care_name():
     print("Welcome to Baby Care center please tell us how may we can help you!")
+    choice = input('''Please choose from the following: 
+                        
+                        1. Baby Names choosing 
+                        2. Baby Role in Future
+                        3. 
+                         ''')
+    
 
