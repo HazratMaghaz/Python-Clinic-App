@@ -72,7 +72,7 @@ def baby_blood_group_identifier():
 
 
 
-def body_mass_index():
+def bodyMassIndex():
     print('''
 
                                                                                                                                                         
@@ -147,9 +147,10 @@ def body_mass_index():
 client = input("Please choose from 1 or 2: ").strip()
 
 if client == "1":
-    body_mass_index()
+    bodyMassIndex()
 elif client == "2":
     baby_blood_group_identifier()
 else:
     print("There is some technical issue, please email us your query \n"
           "Email: maaz28608@gmail.com")
+
