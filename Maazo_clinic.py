@@ -154,3 +154,7 @@ else:
     print("There is some technical issue, please email us your query \n"
           "Email: maaz28608@gmail.com")
 
+
+def baby_care_name():
+    print("Welcome to Baby Care center please tell us how may we can help you!")
+
