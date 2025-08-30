@@ -163,5 +163,7 @@ def baby_care_name():
                         2. Baby Role in Future
                         3. 
                          ''')
-    
+    input("Please enter you father Names")
 
+    input("Enter Letter you want that will first comes in your baby there: ")
+    
