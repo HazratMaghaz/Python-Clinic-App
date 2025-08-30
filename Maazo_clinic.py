@@ -167,5 +167,6 @@ def baby_care_name():
 
     input("Enter Letter you want that will first comes in your baby there: ")
     input("Enter your mother name if you want to keep it like family name there: ")
+    Names = ["Hazrat " , "Maghaz"]
 
 
