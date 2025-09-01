@@ -7,7 +7,15 @@ print('''
 ''')
 
 def client_come():
-    pass
+    ...
+
+
 
 def google_map():
+    ''' Hello '''
     pass
+
+def money_transfer():
+    ...
+
+    
